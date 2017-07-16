@@ -1,9 +1,8 @@
-# Created by https://www.gitignore.io/api/python,linux,macos,osx,windows,intellij
+# Add any directories, files, or patterns you don't want to be tracked by version control
 
 .idea/*
 */*.idea/*
 */out/*
-*.xml
 *.iml
 
 
@@ -176,7 +175,6 @@ $RECYCLE.BIN/
 # User-specific stuff:
 .idea/workspace.xml
 .idea/tasks.xml
-*/*.xml
 
 # Sensitive or high-churn files:
 .idea/dataSources/
@@ -222,4 +220,3 @@ fabric.properties
 # .idea/misc.xml
 # *.ipr
 
-# End of https://www.gitignore.io/api/python,linux,macos,osx,windows,intellij
