@@ -2,6 +2,9 @@
  * Created by tlourenzo on 16-07-2017.
  */
 public class Twu101 {
+
+    private static final String NAME = "Tome Lourenco";
+
     public static void main(String[] args) {
 
         final int n = 3;
@@ -10,9 +13,9 @@ public class Twu101 {
         //drawAHorizontalLine(n);
         //drawAVerticalLine(n);
         //drawARightRectangle(n);
-        isoscelesTriangle(n);
-        diamond();
-        diamondWithName();
+        //isoscelesTriangle(n);
+        //diamond(n);
+        diamondWithName(n);
         fizzBuzz();
 
         PrimeFactors primeFactors = new PrimeFactors();
@@ -66,7 +69,7 @@ public class Twu101 {
         for(int i=0;i<n;i++) {
 
             for(int j=0;j<=n-i;j++) {
-                System.out.print("&");
+                System.out.print(" ");
             }
             for(int k=0;k<=2*i;k++) {
                 System.out.print("*");
@@ -78,14 +81,48 @@ public class Twu101 {
     /**
      *
      */
-    private static void diamond() {
+    private static void diamond(int n) {
+        int count=1;
+        for(int i=1;i<=2*n-1;i++) {
+            for(int j=count;j<=n;j++) {
+                System.out.print(" ");
+            }
+            for(int k=1;k<=count*2-1;k++) {
+                System.out.print("*");
+            }
+            if(i<n)
+                count++;
+            else
+                count--;
+            System.out.println("");
+        }
     }
 
     /**
      *
      */
-    private static void diamondWithName() {
+    private static void diamondWithName(int n) {
+        int count=1;
+        for(int i=1;i<=2*n-1;i++) {
+            for(int j=count;j<=n;j++) {
+                System.out.print(" ");
+            }
+            if(i != n){
+                for(int k=1;k<=count*2-1;k++) {
+                    System.out.print("*");
+                }
+                if(i<n){
+                    count++;
+                }else{
+                    count--;
+                }
 
+                System.out.println("");
+            }else{
+                System.out.println(NAME);
+                count--;
+            }
+        }
     }
 
     /**
