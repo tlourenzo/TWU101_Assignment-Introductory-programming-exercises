@@ -6,10 +6,10 @@ public class Twu101 {
 
         final int n = 3;
 
-        easiestExerciseEver();
-        drawAHorizontalLine(n);
-        drawAVerticalLine(n);
-        drawARightRectangle(n);
+        //easiestExerciseEver();
+        //drawAHorizontalLine(n);
+        //drawAVerticalLine(n);
+        //drawARightRectangle(n);
         isoscelesTriangle();
         diamond();
         diamondWithName();
@@ -32,7 +32,7 @@ public class Twu101 {
      * @param n
      */
     private static void drawAHorizontalLine(int n) {
-        if(n>1){
+        if(n>0){
             System.out.print("*");
             drawAHorizontalLine(n-1);
         }
@@ -51,6 +51,12 @@ public class Twu101 {
      * @param n
      */
     private static void drawARightRectangle(int n) {
+        for (int i = 0; i <n ; i++) {
+            for (int j = 0; j <= i ; j++){
+                System.out.print("*");
+            }
+            System.out.println("\n");
+        }
     }
 
     /**
